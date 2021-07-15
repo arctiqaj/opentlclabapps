@@ -1,0 +1,232 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  creationTimestamp: "2021-07-14T20:18:00Z"
+  generation: 50
+  managedFields:
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:destination:
+          .: {}
+          f:namespace: {}
+          f:server: {}
+        f:project: {}
+        f:source:
+          .: {}
+          f:path: {}
+          f:repoURL: {}
+          f:targetRevision: {}
+        f:syncPolicy:
+          .: {}
+          f:automated:
+            .: {}
+            f:prune: {}
+            f:selfHeal: {}
+      f:status:
+        .: {}
+        f:health: {}
+        f:summary: {}
+        f:sync:
+          .: {}
+          f:comparedTo:
+            .: {}
+            f:destination: {}
+            f:source: {}
+    manager: argocd-server
+    operation: Update
+    time: "2021-07-14T20:26:10Z"
+  - apiVersion: argoproj.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:health:
+          f:status: {}
+        f:history: {}
+        f:operationState:
+          .: {}
+          f:finishedAt: {}
+          f:message: {}
+          f:operation:
+            .: {}
+            f:initiatedBy:
+              .: {}
+              f:automated: {}
+            f:retry:
+              .: {}
+              f:limit: {}
+            f:sync:
+              .: {}
+              f:prune: {}
+              f:revision: {}
+          f:phase: {}
+          f:startedAt: {}
+          f:syncResult:
+            .: {}
+            f:resources: {}
+            f:revision: {}
+            f:source:
+              .: {}
+              f:path: {}
+              f:repoURL: {}
+              f:targetRevision: {}
+        f:reconciledAt: {}
+        f:resources: {}
+        f:sourceType: {}
+        f:summary:
+          f:images: {}
+        f:sync:
+          f:comparedTo:
+            f:destination:
+              f:namespace: {}
+              f:server: {}
+            f:source:
+              f:path: {}
+              f:repoURL: {}
+              f:targetRevision: {}
+          f:revision: {}
+          f:status: {}
+    manager: argocd-application-controller
+    operation: Update
+    time: "2021-07-15T14:46:34Z"
+  name: finalargo
+  namespace: argocd
+  resourceVersion: "228868"
+  selfLink: /apis/argoproj.io/v1alpha1/namespaces/argocd/applications/finalargo
+  uid: bfb789ba-86bd-4dcc-8def-48e3ba49423f
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: helm-guestbook
+    repoURL: https://github.com/arctiqaj/argocd-guestbook.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+status:
+  health:
+    status: Healthy
+  history:
+  - deployStartedAt: "2021-07-14T20:18:01Z"
+    deployedAt: "2021-07-14T20:18:02Z"
+    id: 0
+    revision: 9317d117746123c5353f5d5d257ddf22cb4caffc
+    source:
+      path: helm-guestbook
+      repoURL: https://github.com/arctiqaj/argocd-guestbook.git
+      targetRevision: HEAD
+  - deployStartedAt: "2021-07-14T20:22:53Z"
+    deployedAt: "2021-07-14T20:22:55Z"
+    id: 1
+    revision: b891040aaba5694ad7c761ead504c1a19019d528
+    source:
+      path: helm-guestbook
+      repoURL: https://github.com/arctiqaj/argocd-guestbook.git
+      targetRevision: HEAD
+  - deployStartedAt: "2021-07-14T20:25:09Z"
+    deployedAt: "2021-07-14T20:25:11Z"
+    id: 2
+    revision: 7fa5ca2b839339a003630eb3777ed69cd869f962
+    source:
+      path: helm-guestbook
+      repoURL: https://github.com/arctiqaj/argocd-guestbook.git
+      targetRevision: HEAD
+  - deployStartedAt: "2021-07-14T20:26:10Z"
+    deployedAt: "2021-07-14T20:26:12Z"
+    id: 3
+    revision: f0fc9224325de8b084b39d77bdd83b83306e07bc
+    source:
+      path: helm-guestbook
+      repoURL: https://github.com/arctiqaj/argocd-guestbook.git
+      targetRevision: HEAD
+  operationState:
+    finishedAt: "2021-07-14T20:26:12Z"
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        automated: true
+      retry:
+        limit: 5
+      sync:
+        prune: true
+        revision: f0fc9224325de8b084b39d77bdd83b83306e07bc
+    phase: Succeeded
+    startedAt: "2021-07-14T20:26:10Z"
+    syncResult:
+      resources:
+      - group: ""
+        hookPhase: Running
+        kind: Service
+        message: service/finalargo-helm-guestbook unchanged
+        name: finalargo-helm-guestbook
+        namespace: default
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        kind: Deployment
+        message: deployment.apps/finalargo-helm-guestbook configured
+        name: finalargo-helm-guestbook
+        namespace: default
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: route.openshift.io
+        hookPhase: Running
+        kind: Route
+        message: route.route.openshift.io/gbookroute unchanged
+        name: gbookroute
+        namespace: default
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      revision: f0fc9224325de8b084b39d77bdd83b83306e07bc
+      source:
+        path: helm-guestbook
+        repoURL: https://github.com/arctiqaj/argocd-guestbook.git
+        targetRevision: HEAD
+  reconciledAt: "2021-07-15T14:46:34Z"
+  resources:
+  - health:
+      status: Healthy
+    kind: Service
+    name: finalargo-helm-guestbook
+    namespace: default
+    status: Synced
+    version: v1
+  - group: apps
+    health:
+      status: Healthy
+    kind: Deployment
+    name: finalargo-helm-guestbook
+    namespace: default
+    status: Synced
+    version: v1
+  - group: route.openshift.io
+    kind: Route
+    name: gbookroute
+    namespace: default
+    status: Synced
+    version: v1
+  sourceType: Helm
+  summary:
+    images:
+    - gcr.io/heptio-images/ks-guestbook-demo:0.1
+  sync:
+    comparedTo:
+      destination:
+        namespace: default
+        server: https://kubernetes.default.svc
+      source:
+        path: helm-guestbook
+        repoURL: https://github.com/arctiqaj/argocd-guestbook.git
+        targetRevision: HEAD
+    revision: f0fc9224325de8b084b39d77bdd83b83306e07bc
+    status: Synced
