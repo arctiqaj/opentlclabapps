@@ -4,5 +4,9 @@ metadata:
   name: sysdig-qn5mf
   namespace: sysdig
 spec:
+  source:
+    path: agent_deploy
+    repoURL: https://github.com/draios/sysdig-cloud-scripts.git
+    targetRevision: HEAD
   targetNamespaces:
   - sysdig
