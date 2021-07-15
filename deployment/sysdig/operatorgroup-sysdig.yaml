@@ -2,50 +2,8 @@
 apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
 metadata:
-  annotations:
-    olm.providedAPIs: SysdigAgent.v1.sysdig.com
-  creationTimestamp: "2021-07-15T15:37:01Z"
-  generateName: sysdig-
-  generation: 1
-  managedFields:
-  - apiVersion: operators.coreos.com/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:generateName: {}
-      f:spec:
-        .: {}
-        f:targetNamespaces:
-          .: {}
-          v:"sysdig": {}
-    manager: Mozilla
-    operation: Update
-    time: "2021-07-15T15:37:01Z"
-  - apiVersion: operators.coreos.com/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          .: {}
-          f:olm.providedAPIs: {}
-      f:status:
-        .: {}
-        f:lastUpdated: {}
-        f:namespaces:
-          .: {}
-          v:"sysdig": {}
-    manager: olm
-    operation: Update
-    time: "2021-07-15T15:37:04Z"
   name: sysdig-qn5mf
   namespace: sysdig
-  resourceVersion: "243258"
-  selfLink: /apis/operators.coreos.com/v1/namespaces/sysdig/operatorgroups/sysdig-qn5mf
-  uid: cd25ca82-0cec-411f-86d4-83a340e289ae
 spec:
   targetNamespaces:
-  - sysdig
-status:
-  lastUpdated: "2021-07-15T15:37:01Z"
-  namespaces:
   - sysdig
