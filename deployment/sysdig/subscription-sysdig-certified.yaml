@@ -1,73 +1,8 @@
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
-  creationTimestamp: "2021-07-15T15:37:01Z"
-  generation: 1
-  labels:
-    operators.coreos.com/sysdig-certified.sysdig: ""
-  managedFields:
-  - apiVersion: operators.coreos.com/v1alpha1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:spec:
-        .: {}
-        f:channel: {}
-        f:installPlanApproval: {}
-        f:name: {}
-        f:source: {}
-        f:sourceNamespace: {}
-        f:startingCSV: {}
-    manager: Mozilla
-    operation: Update
-    time: "2021-07-15T15:37:01Z"
-  - apiVersion: operators.coreos.com/v1alpha1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:labels:
-          .: {}
-          f:operators.coreos.com/sysdig-certified.sysdig: {}
-    manager: olm
-    operation: Update
-    time: "2021-07-15T15:37:01Z"
-  - apiVersion: operators.coreos.com/v1alpha1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:spec:
-        f:config:
-          .: {}
-          f:resources: {}
-      f:status:
-        .: {}
-        f:catalogHealth: {}
-        f:conditions: {}
-        f:currentCSV: {}
-        f:installPlanGeneration: {}
-        f:installPlanRef:
-          .: {}
-          f:apiVersion: {}
-          f:kind: {}
-          f:name: {}
-          f:namespace: {}
-          f:resourceVersion: {}
-          f:uid: {}
-        f:installedCSV: {}
-        f:installplan:
-          .: {}
-          f:apiVersion: {}
-          f:kind: {}
-          f:name: {}
-          f:uuid: {}
-        f:lastUpdated: {}
-        f:state: {}
-    manager: catalog
-    operation: Update
-    time: "2021-07-15T15:37:06Z"
   name: sysdig-certified
   namespace: sysdig
-  resourceVersion: "243361"
-  selfLink: /apis/operators.coreos.com/v1alpha1/namespaces/sysdig/subscriptions/sysdig-certified
-  uid: 4272998a-2434-4691-b58d-8ee15636ed76
 spec:
   channel: stable
   installPlanApproval: Automatic
@@ -75,55 +10,3 @@ spec:
   source: certified-operators
   sourceNamespace: openshift-marketplace
   startingCSV: sysdig-operator.v1.8.3
-status:
-  catalogHealth:
-  - catalogSourceRef:
-      apiVersion: operators.coreos.com/v1alpha1
-      kind: CatalogSource
-      name: certified-operators
-      namespace: openshift-marketplace
-      resourceVersion: "239240"
-      uid: 795180ca-9946-46ea-b8d3-d63026aa56d4
-    healthy: true
-    lastUpdated: "2021-07-15T15:37:01Z"
-  - catalogSourceRef:
-      apiVersion: operators.coreos.com/v1alpha1
-      kind: CatalogSource
-      name: community-operators
-      namespace: openshift-marketplace
-      resourceVersion: "238978"
-      uid: dfd78ffe-bfc9-46e8-a5ce-9f23741b50bc
-    healthy: true
-    lastUpdated: "2021-07-15T15:37:01Z"
-  - catalogSourceRef:
-      apiVersion: operators.coreos.com/v1alpha1
-      kind: CatalogSource
-      name: redhat-operators
-      namespace: openshift-marketplace
-      resourceVersion: "238917"
-      uid: 907261b0-9025-47f8-bf87-6518396f32a1
-    healthy: true
-    lastUpdated: "2021-07-15T15:37:01Z"
-  conditions:
-  - lastTransitionTime: "2021-07-15T15:37:01Z"
-    message: all available catalogsources are healthy
-    reason: AllCatalogSourcesHealthy
-    status: "False"
-    type: CatalogSourcesUnhealthy
-  currentCSV: sysdig-operator.v1.8.3
-  installPlanGeneration: 1
-  installPlanRef:
-    apiVersion: operators.coreos.com/v1alpha1
-    kind: InstallPlan
-    name: install-wznzl
-    namespace: sysdig
-    resourceVersion: "243243"
-    uid: bf99812c-0ea0-4501-8b24-4f123b45681d
-  installedCSV: sysdig-operator.v1.8.3
-  installplan:
-    apiVersion: operators.coreos.com/v1alpha1
-    kind: InstallPlan
-    name: install-wznzl
-    uuid: bf99812c-0ea0-4501-8b24-4f123b45681d
-  lastUpdated: "2021-07-15T15:37:06Z"
-  state: AtLatestKnown
